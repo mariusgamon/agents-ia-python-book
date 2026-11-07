@@ -6,7 +6,7 @@
 
 Code source compagnon du livre **« Agents IA en Python : créer, déployer et sécuriser un agent IA en production »** (Marius Gamon, 2026).
 
-Le livre "Agents IA en Python" sortira bientôt. Ce dépôt contient son code, prêt à lancer et testé.
+Le livre est disponible en PDF et EPUB sur [Gumroad](https://mariusgamon.gumroad.com/l/agents-ia-python), et sur Amazon en version Kindle et brochée. L'avant-propos et le Jour 1 sont [gratuits](https://mariusgamon.gumroad.com/l/extrait-agents-ia-python). Ce dépôt contient son code, prêt à lancer et testé.
 
 Chaque fichier reprend le code du chapitre correspondant. Les rares écarts avec le livre (corrections trouvées en testant) sont listés dans [`ERRATA.md`](ERRATA.md).
 
