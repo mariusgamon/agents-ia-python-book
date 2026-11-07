@@ -6,6 +6,8 @@
 
 Code source compagnon du livre **« Agents IA en Python : créer, déployer et sécuriser un agent IA en production »** (Marius Gamon, 2026).
 
+Le livre "Agents IA en Python" sortira bientôt. Ce dépôt contient son code, prêt à lancer et testé.
+
 Chaque fichier reprend le code du chapitre correspondant. Les rares écarts avec le livre (corrections trouvées en testant) sont listés dans [`ERRATA.md`](ERRATA.md).
 
 > Testé le 28 octobre 2026 avec Python 3.12, `openai-agents==0.24.0` et `openai==3.40.0`.
@@ -108,4 +110,4 @@ curl -X POST http://localhost:8000/api/chat \
 
 ## Licence
 
-Code sous licence MIT (voir `LICENSE`). Le contenu du livre reste © Marius Gamon, 2026.
+Le code de ce dépôt est sous licence MIT (voir [`LICENSE`](LICENSE)). Le texte du livre, ses figures et sa couverture ne sont pas couverts par cette licence : ils restent © Marius Gamon, 2026, tous droits réservés.
