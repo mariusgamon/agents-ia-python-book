@@ -1,0 +1,7 @@
+.env
+.env.local
+*.pyc
+__pycache__/
+agent_memory.db
+agent.log
+agent_metrics.jsonl

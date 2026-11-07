@@ -1,0 +1,33 @@
+# Dépendances du livre « Agents IA en Python : créer, déployer et sécuriser un agent IA en production »
+# Installation : pip install -r requirements.txt   (ou : uv pip install -r requirements.txt)
+
+# Cœur — tous les jours
+openai-agents==0.24.0
+openai==3.40.0
+python-dotenv==1.2.4
+httpx==0.28.1
+pydantic==2.14.1
+
+# Jour 1 / 5 — robustesse
+backoff==2.2.1
+
+# Jour 3 — mémoire
+aiosqlite==0.22.1
+numpy>=1.26,<3        # numpy 2.5 exige Python 3.12 ; les workflows CI du livre utilisent 3.11
+
+# Jour 4 — multi-agents
+langgraph==1.2.18
+langchain-core==1.7.1
+langchain-openai==1.7.3
+
+# Jour 5 — tests & observabilité
+pytest==9.2.0
+pytest-asyncio==1.4.1
+respx==0.23.1
+langfuse==5.0.4
+logfire[openai]==5.4.0
+
+# Jour 6 — déploiement
+fastapi==0.162.0
+uvicorn[standard]==0.54.0
+psutil==7.2.2

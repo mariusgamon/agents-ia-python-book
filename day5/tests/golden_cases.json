@@ -1,0 +1,14 @@
+[
+  {
+    "input": "TVA sur 1000€ à 20%",
+    "expected_tool": "calculate_vat",
+    "expected_contains": ["1200", "200"],
+    "max_tokens": 800
+  },
+  {
+    "input": "Quel temps fait-il à Lyon ?",
+    "expected_tool": "get_weather",
+    "expected_contains": ["Lyon"],
+    "max_tokens": 1200
+  }
+]

@@ -1,0 +1,34 @@
+# Two jobs: fast tests on every push, expensive tests once a day.
+name: Tests
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+  schedule:
+    - cron: "0 4 * * *"  # 04:00 UTC nightly
+
+jobs:
+  fast:
+    # Runs on every push — no tokens burned.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install -r requirements.txt -r requirements-dev.txt
+      - run: pytest tests/test_tools.py tests/test_pipeline.py -v
+        # These use mocks only — zero API calls.
+
+  llm:
+    # Runs nightly + manually — real LLM, real tokens, real bill.
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install -r requirements.txt -r requirements-dev.txt
+      - run: pytest tests/test_golden.py tests/test_agent_behavior.py -v
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY_CI }}
+          # Separate key from production. Low monthly budget cap in OpenAI dashboard.

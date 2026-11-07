@@ -1,0 +1,26 @@
+# Secrets — ne jamais committer
+.env
+.env.local
+.env.*.local
+
+# Environnement local
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Fichiers générés à l'exécution (bases SQLite, logs, métriques)
+*.db
+*.sqlite3
+*.log
+agent_metrics.jsonl
+.syrupy/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Sorties des cas pratiques du Jour 7
+reports/

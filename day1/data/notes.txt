@@ -1,0 +1,5 @@
+Réunion du 10 avril 2026 :
+- Lancer l'API v2 avant le 30 avril
+- Budget marketing : 5 000 €
+- Contact client prioritaire : Marie Dupont (marie@example.com)
+- Tech stack décidé : FastAPI + PostgreSQL + Redis
